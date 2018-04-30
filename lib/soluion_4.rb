@@ -1,4 +1,5 @@
 # Shameless Green
+# Flog Score: 19.3
 
 class Bottles
   def song

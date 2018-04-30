@@ -1,4 +1,5 @@
 # Incomprehensibly Concise
+# Flog Score: 42.5
 
 class Bottles
   def song

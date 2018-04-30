@@ -1,4 +1,5 @@
 # Speculatively General
+# Flog Score: 26.5
 
 class Bottles
   NoMore = lambda do |verse|

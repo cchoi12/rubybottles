@@ -1,4 +1,5 @@
 # Concretely Abstract
+# Flog Score: 14.4
 
 class Bottles
   def song

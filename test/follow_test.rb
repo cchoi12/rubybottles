@@ -37,7 +37,7 @@ class BottleTest < Minitest::Test
   end
 
   def test_verse_0
-    expected = "No more botles of beer on the wall, " +
+    expected = "No more bottles of beer on the wall, " +
                "no more bottles of beer.\n" +
                "Go to the store and buy some more, " +
                "99 bottles of beer on the wall.\n"
@@ -57,7 +57,7 @@ class BottleTest < Minitest::Test
     assert_equal expected, Bottles.new.verses(99, 98)
   end
 
-  def test_a_few_cerses
+  def test_a_few_verses
     expected = "2 bottles of beer on the wall, " +
                "2 bottles of beer.\n" +
                "Take one down and pass it around, " +
@@ -68,7 +68,7 @@ class BottleTest < Minitest::Test
                "Take it down and pass it around, " +
                "no more bottles of beer on the wall.\n" +
                "\n" +
-               "No more botles of beer on the wall, " +
+               "No more bottles of beer on the wall, " +
                "no more bottles of beer.\n" +
                "Go to the store and buy some more, " +
                "99 bottles of beer on the wall.\n"

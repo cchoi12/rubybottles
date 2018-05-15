@@ -2,8 +2,10 @@
 # httparty is also a good alternative as well.
 require 'rest-client'
 require 'json'
+require 'pry'
+require 'active_support/all'
 
-API_ENDPOINT = 'https://api.github.com/users/cchoi12/repos'
+API_ENDPOINT = 'https://api.github.com/users/cchoi12/repos'.freeze
 
 def with_curl
   response = `curl #{API_ENDPOINT}`
@@ -19,9 +21,7 @@ end
 # methods on the API responses.
 def main
   api = with_curl
-
-  require 'pry'; binding.pry
-  require 'active_support/all'; puts api.map {|api| api.slice 'html_url', 'full_name'}
+  puts api.map { |api| api.slice 'html_url', 'full_name' }
 end
 
 main

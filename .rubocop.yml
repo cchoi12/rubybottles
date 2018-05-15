@@ -1,0 +1,42 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+    - node_modules/**/*
+    - lib/solution_1.rb
+    - lib/solution_2.rb
+    - lib/solution_3.rb
+    - lib/solution_4.rb
+    - refactor/movie.rb
+    - test/*
+    - api/*
+  DisplayCopNames: true
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - Guardfile
+    - config/environments/**/*
+    - config/initializers/devise.rb
+    - db/seeds.rb
+    - config/routes.rb
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - bin/**/*
+
+Layout/IndentHeredoc:
+  Enabled: false

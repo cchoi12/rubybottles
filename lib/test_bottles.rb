@@ -3,22 +3,22 @@ class Bottles
     verses(99, 0)
   end
 
-  def verses starting, ending
+  def verses(starting, ending)
     starting.downto(ending).collect do |n|
       verse(n)
     end.join("\n")
   end
 
-  def verse number
-    "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " +
-    "#{quantity(number)} #{container(number)} of beer.\n" +
-    "#{action(number)}" +
-    "#{quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
+  def verse(number)
+    "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " \
+      "#{quantity(number)} #{container(number)} of beer.\n" \
+      "#{action(number)}" \
+      "#{quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
   end
 
   private
 
-  def successor number
+  def successor(number)
     if number.zero?
       99
     else
@@ -26,7 +26,7 @@ class Bottles
     end
   end
 
-  def action number
+  def action(number)
     if number.zero?
       'Go to the store and buy some more, '
     else
@@ -34,7 +34,7 @@ class Bottles
     end
   end
 
-  def quantity number
+  def quantity(number)
     if number.zero?
       'no more'
     else
@@ -42,7 +42,7 @@ class Bottles
     end
   end
 
-  def pronoun number
+  def pronoun(number)
     if number == 1
       'it'
     else
@@ -50,7 +50,7 @@ class Bottles
     end
   end
 
-  def container number
+  def container(number)
     if number == 1
       'bottle'
     else

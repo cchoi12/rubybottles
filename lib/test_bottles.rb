@@ -10,27 +10,35 @@ class Bottles
   end
 
   def verse number
-    case number
-    when 0
-      "#{quantity(number).capitalize} bottles of beer on the wall, " +
-      "no more bottles of beer.\n" +
-      "Go to the store and buy some more, " +
-      "99 bottles of beer on the wall.\n"
-    else
-      "#{number} #{container(number)} of beer on the wall, " +
-      "#{number} #{container(number)} of beer.\n" +
-      "Take #{pronoun(number)} down and pass it around, " +
-      "#{quantity(number.pred)} #{container(number.pred)} of beer on the wall.\n"
-    end
+    "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " +
+    "#{quantity(number)} #{container(number)} of beer.\n" +
+    "#{action(number)}" +
+    "#{quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
   end
 
   private
+
+  def successor number
+    if number.zero?
+      99
+    else
+      number - 1
+    end
+  end
+
+  def action number
+    if number.zero?
+      'Go to the store and buy some more, '
+    else
+      "Take #{pronoun(number)} down and pass it around, "
+    end
+  end
 
   def quantity number
     if number.zero?
       'no more'
     else
-      number
+      number.to_s
     end
   end
 
